@@ -22,3 +22,4 @@ def main():
     turtle.seth(-40)    
     drawSnake(40, 80, 5, pythonsize/2)
 
+123
