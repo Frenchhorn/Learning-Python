@@ -1,7 +1,7 @@
 #coding=utf-8
 #qpy:console
 #qpy:2
-__author__ 'LR'
+__author__ = 'LR'
 import site
 import json
 import os
