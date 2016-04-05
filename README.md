@@ -26,4 +26,4 @@ From 2015-11-11 to
 * Django  (最基础的部分)  
 
 ## QPython  
-一些qpython脚步
+一些qpython脚本
