@@ -30,6 +30,6 @@ From 2015-11-11 to
 
 ## 小脚本
 比较有用的：
-* backup.py     备份
-* mydir.py      列出模块的命名空间
-* reloadall.py  递归重载模块
+* backup.py          备份
+* mydir.py           列出模块的命名空间
+* reloadall.py       递归重载模块
