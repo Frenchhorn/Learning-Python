@@ -1,35 +1,30 @@
-# Learning-Python  
+# Learning-Python
 From 2015-11-11 to
 =======
 ## 库  
-一些库的简要介绍，包括标准库和第三方库，框架。
 
 标准库：  
-* 标准库_collections模块.py  
-* 标准库_math库.py  
-* 标准库_os库.py  
-* 标准库_pickle库.py  
-* 标准库_random库.py  
-* 标准库_shutil.py  
-* 标准库_timeit.py  
-* 标准库_time库.py  
-* 标准库_tkinter库.py  (未写)  
+* 标准库_collections.py
+* 标准库_math.py
+* 标准库_os.py
+* 标准库_pickle.py
+* 标准库_random.py
+* 标准库_shutil.py
+* 标准库_timeit.py
+* 标准库_time.py
   
-第三方库：  
-* Easygui.py  
-* PIL.ipynb  
-* PyAutoGUI官方文档.ipynb  (写到一半发现已经有人翻译了囧)  
-* graphics库.py  
-* 下载工具_you-get.py  
-  
-框架:  
-* Django  (最基础的部分)  
+第三方库：
+* Easygui.py
+* PIL.ipynb
+* PyAutoGUI.ipynb
+* graphics.py
+* you-get.py
+* Django
 
-## QPython  
-一些qpython脚本
-
-## 小脚本
-比较有用的：
+## 脚本
 * backup.py          备份
 * mydir.py           列出模块的命名空间
 * reloadall.py       递归重载模块
+* QPython
+
+## 文档
