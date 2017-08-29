@@ -1,54 +1,61 @@
-# using scrapy shell
+# Using scrapy shell
 https://www.analyticsvidhya.com/blog/2017/07/web-scraping-in-python-using-scrapy/
 
-## open the scrapy shell
+https://docs.scrapy.org/en/latest/topics/commands.html
+
+## Open the scrapy shell
 `scrapy shell`
 
-## crawl the website
+## Crawl the website
 `fetch("https://www.reddit.com/r/gameofthrones/")`
 
-## see the page in browser
+## See the page in browser
 `view(response)`
 
-## whole html
+## Whole html
 `response.text`
 
-## get the (the first one) title html (use css selector), return string
+## Get the (the first one) title html (use css selector), return string
 `response.css('title').extract_first()`
 
-## get the title html (all), return list
+## Get the title html (all), return list
 `response.css('title').extract()`
 
-## get the title text
+## Get the title text
 `response.css('title::text').extract_first()`
 
-## get the attr
+`response.css('title::text')[0].extract()`
+
+## Get the attr
 `response.css('span::attr(class)').extract_first()`
 
+## Use re
+```python
+>>> response.css('title::text').re(r'Quotes.*')
+['Quotes to Scrape']
+>>> response.css('title::text').re(r'Q\w+')
+['Quotes']
+>>> response.css('title::text').re(r'(\w+) to (\w+)')
+['Quotes', 'Scrape']
+```
 
-# writing custom spiders
 
-## creating a scrapy project
-`scrapy startproject ourfirstscraper`
+# Writing custom spiders
+## Creating a scrapy project
+`scrapy startproject ourfirstscraper [project_dir]`
 
-## creating a spider
+That will create a Scrapy project under the `project_dir` directory. If `project_dir` wasn't specified,
+`project_dir` will be the same as `myproject`
+
+## Creating a spider
 `scrapy genspider redditbot www.reddit.com/r/gameofthrones/`
 
-## start a spider 
+## Start a spider 
 `scrapy crawl redditbot`
 
-## exporting scraped data as csv (settings.py)
+## Exporting scraped data as csv (settings.py)
 `FEED_FORMAT = "csv"`
 
 `FEED_URI = "reddit.csv"`
 
-
-# download images
-
-## enable images pipeline
-`ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}`
-
-`IMAGES_STORE = 'tmp/images/'`
-
-## set the url to the field image_urls
-`scraped_info['image_urls'] = ['https://static.runoob.com/images/icon/go.png']`
+or `scrapy crawl redditbot -o test.json`
